@@ -1,16 +1,15 @@
 package com.virtualpairprogrammers.servlets;
 
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.List;
+import com.virtualpairprogrammers.domain.Book;
+import com.virtualpairprogrammers.services.BookService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.virtualpairprogrammers.domain.Book;
-import com.virtualpairprogrammers.services.BookService;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
 
 public class FindBooksByAuthorServlet extends HttpServlet
 {
@@ -27,7 +26,7 @@ public class FindBooksByAuthorServlet extends HttpServlet
 		// form handling - extracting a parameter from the form
 		String author = request.getParameter("AUTHOR");
 		
-		List<Book> allBooks = service.getAllBooksByAuthor(author);		
+		List<Book> allBooks = service.getAllBooksByAuthor(author);
 		
 		// render the output
 		// output the result page

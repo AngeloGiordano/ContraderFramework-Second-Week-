@@ -1,15 +1,14 @@
 package com.virtualpairprogrammers.servlets;
 
-import java.io.IOException;
-import java.io.PrintWriter;
+import com.virtualpairprogrammers.domain.Book;
+import com.virtualpairprogrammers.services.BookService;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import com.virtualpairprogrammers.domain.Book;
-import com.virtualpairprogrammers.services.BookService;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 public class AddNewBookServlet extends HttpServlet
 {
